@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Avatar Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="index.php"></form>
+    <section>
+        <h1>WANNA CREATE AN AVATAR FOR YOUR NAME?</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label for="">ENTER YOUR NAME</label>
+                <input type="text" name="" id="nameId" spellcheck="false" placeholder="keren">
+            </div>
+
+            <div class="imageDiv">
+                <img src="https://joeschmoe.io/api/v1/keren" width="200" height="200" id="imgChange">
+            </div>
+
+            <button>Click Me</button>
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const name = $('#nameId').val();
+                $('#imgChange').attr('src', `https://joeschmoe.io/api/v1/${name}`)
+            });
+        });
+    </script>
+
+    <footer>© Copyright Avatar Creator 2021</footer>
+
+</body>
+</html>
